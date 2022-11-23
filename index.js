@@ -16,6 +16,21 @@ const questions = [
         message: 'What is your project description?'
     },
     {
+        type: 'input',
+        name: 'installation',
+        message: 'What are the project installation instructions?'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Are there any usage limitations?'
+    },
+    {
+        type: 'input',
+        name: 'contributingGuidelines',
+        message: 'What are the project contributing guidelines?'
+    },
+    {
         // pulled list of licences from https://opensource.org/licenses/category
         type: 'list',
         name: 'license',

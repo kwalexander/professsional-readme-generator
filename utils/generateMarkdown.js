@@ -3,13 +3,13 @@
 // Badges geneated from https://shields.io/ tool
 function renderLicenseBadge(license) {
   if (license == "MIT") {
-    return "[https://img.shields.io/badge/License-MIT-green.png]"
+    return "![badge](https://img.shields.io/badge/License-MIT-green.png)"
   } else if (license == "Apache 2.0") {
-    return "[https://img.shields.io/badge/License-Apache2.0-brightgreen.png]"
+    return "![badge](https://img.shields.io/badge/License-Apache2.0-brightgreen.png)"
   } else if (license = "Mozilla Public") {
-    return "[https://img.shields.io/badge/License-Mozilla-blue.png]"
+    return "![badge](https://img.shields.io/badge/License-Mozilla-blue.png)"
   } else if (license = "European Union Public") {
-    return "[https://img.shields.io/badge/License-EuropeanUnionPublic-blueviolet.png]"
+    return "![badge](https://img.shields.io/badge/License-EuropeanUnionPublic-blueviolet.png)"
   } else {
     return "";
   }
@@ -19,13 +19,13 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license == "MIT") {
-    return "[https://opensource.org/licenses/MIT]"
+    return "https://opensource.org/licenses/MIT"
   } else if (license == "Apache 2.0") {
-    return "[https://opensource.org/licenses/Apache-2.0]"
+    return "https://opensource.org/licenses/Apache-2.0"
   } else if (license = "Mozilla Public") {
-    return "[https://opensource.org/licenses/MPL-2.0]"
+    return "https://opensource.org/licenses/MPL-2.0"
   } else if (license = "European Union Public") {
-    return "[https://opensource.org/licenses/EUPL-1.1]"
+    return "https://opensource.org/licenses/EUPL-1.1"
   } else {
     return "";
   }
@@ -33,13 +33,52 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) {
+  return `
+  # ${license.title}
+  ## Licenses
+  ${renderLicenseBadge}
+  ${renderLicenseLink}
+  `;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.projectTitle}
 
-`;
+  ## Table of Contents
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contribution)
+  * [Tests](#tests)
+  * [Questions](#questions)
+
+  ## User Name
+  ${data.gitHubUserName}
+  http://github.com/${data.gitHubUserName}
+
+  ## Email Address
+  ${data.email}
+  
+  ## Description
+  ${data.description}
+  
+  ## Installation
+  ${data.installation}
+  
+  ## Usage
+  ${data.usage}
+  
+  ## Licenses
+  ${renderLicenseBadge(data.license)}
+  ${renderLicenseLink(data.license)}
+  
+  ## Contributing Guidelines
+  ${data.contributingGuidelines}
+
+  `;
 }
 
 module.exports = generateMarkdown;
