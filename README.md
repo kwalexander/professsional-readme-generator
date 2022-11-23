@@ -1,4 +1,4 @@
-# test
+# Run Buddy
 
   ## Table of Contents
   * [Description](#description)
@@ -10,26 +10,26 @@
   * [Questions](#questions)
 
   ## User Name
-  test
-  http://github.com/test
+  kwalexander
+  http://github.com/kwalexander
 
   ## Email Address
-  test
+  kaspar@gmail.com
   
   ## Description
-  test
+  A project that runs a website that offers fitness training services.
   
   ## Installation
-  test
+  Navigate to the GitHub repo and follow the README instructions.
   
   ## Usage
-  
+  Reference ownership via GitHub attribution.
   
   ## Licenses
   ![badge](https://img.shields.io/badge/License-MIT-green.png)
   https://opensource.org/licenses/MIT
   
   ## Contributing Guidelines
-  test
+  Clone repo, don't fork.
 
   
